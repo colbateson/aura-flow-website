@@ -1,96 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>AuraFlow Terms of Use</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use - AuraFlow</title>
+    <link rel="icon" href="icon.jpg" type="image/jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #050505; color: #e5e7eb; }
+        .text-aura { color: #7B3FAD; }
+        .glass-panel { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
+    </style>
 </head>
-<body>
+<body class="antialiased">
 
-<h1>Terms of Use</h1>
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 bg-black/50 backdrop-blur-lg border-b border-white/10">
+        <div class="max-w-5xl mx-auto flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2 text-white hover:text-aura transition-colors group">
+                <i data-lucide="arrow-left" class="w-5 h-5 group-hover:-translate-x-1 transition-transform"></i>
+                <span class="font-bold">Back to Home</span>
+            </a>
+            <img src="icon.jpg" class="w-8 h-8 rounded-full shadow-lg" alt="AuraFlow">
+        </div>
+    </nav>
 
-<p>Last updated: 3 January 2026</p>
+    <main class="max-w-3xl mx-auto px-6 pt-32 pb-24">
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-black mb-4 text-white">Terms of Use</h1>
+            <p class="text-gray-500 uppercase tracking-widest text-sm font-bold">Last updated: 3 January 2026</p>
+        </header>
 
-<p>
-These Terms of Use govern your use of the AuraFlow mobile application on any supported platform, including iOS and Android.
-By downloading or using AuraFlow, you agree to these terms.
-</p>
+        <div class="glass-panel rounded-[2.5rem] p-8 md:p-12 space-y-8 leading-relaxed shadow-2xl">
+            <section>
+                <p>These Terms of Use govern your use of the AuraFlow mobile application on any supported platform, including iOS and Android. By downloading or using AuraFlow, you agree to these terms.</p>
+            </section>
 
-<h2>Use of the App</h2>
+            <section>
+                <h2 class="text-xl font-bold mb-4 text-white">No Medical Advice</h2>
+                <p>AuraFlow is not a medical device and does not provide medical advice, diagnosis, or treatment. You should consult a qualified professional for any medical or mental health concerns.</p>
+            </section>
 
-<p>
-AuraFlow provides audio-based sound experiences intended for relaxation, focus, sleep, and general wellbeing.
-The app is provided for personal, non-commercial use only.
-</p>
+            <section>
+                <h2 class="text-xl font-bold mb-4 text-white">Intellectual Property</h2>
+                <p>All content within AuraFlow, including audio, visuals, text, and design, is owned by AuraFlow or its licensors. You may not copy, distribute, modify, or resell any part of the app or its content.</p>
+            </section>
 
-<h2>No Medical Advice</h2>
+            <section>
+                <h2 class="text-xl font-bold mb-4 text-white">Refunds</h2>
+                <p>Refunds are handled by the app store provider (Apple or Google) in accordance with their policies. AuraFlow cannot issue refunds directly.</p>
+            </section>
 
-<p>
-AuraFlow is not a medical device and does not provide medical advice, diagnosis, or treatment.
-Any content provided is for general wellbeing and informational purposes only.
-</p>
+            <div class="pt-10 border-t border-white/5 text-center">
+                <p class="text-sm text-gray-500 mb-2">Support & Legal Inquiries:</p>
+                <a href="mailto:hello@aura-flow.com" class="text-aura font-black text-lg">hello@aura-flow.com</a>
+            </div>
+        </div>
+    </main>
 
-<p>
-You should consult a qualified professional for any medical or mental health concerns.
-</p>
-
-<h2>In-App Purchases</h2>
-
-<p>
-AuraFlow offers optional in-app purchases to unlock additional content.
-All purchases are processed by the relevant app store provider, such as Apple App Store or Google Play.
-</p>
-
-<p>
-AuraFlow does not handle payments directly and cannot access your payment information.
-</p>
-
-<h2>Refunds</h2>
-
-<p>
-Refunds are handled by the app store provider in accordance with their policies.
-AuraFlow cannot issue refunds directly.
-</p>
-
-<h2>Intellectual Property</h2>
-
-<p>
-All content within AuraFlow, including audio, visuals, text, and design, is owned by AuraFlow or its licensors and is protected by applicable intellectual property laws.
-</p>
-
-<p>
-You may not copy, distribute, modify, or resell any part of the app or its content.
-</p>
-
-<h2>Availability</h2>
-
-<p>
-AuraFlow is provided on an “as is” and “as available” basis.
-We do not guarantee uninterrupted or error-free operation.
-</p>
-
-<h2>Limitation of Liability</h2>
-
-<p>
-To the fullest extent permitted by law, AuraFlow shall not be liable for any damages arising from the use or inability to use the app.
-</p>
-
-<h2>Changes to These Terms</h2>
-
-<p>
-These Terms of Use may be updated from time to time. Continued use of the app constitutes acceptance of the updated terms.
-</p>
-
-<h2>Contact</h2>
-
-<p>
-If you have any questions about these Terms of Use, you can contact us at:
-</p>
-
-<p>
-Email: hello@aura-flow.com
-</p>
-
+    <script>lucide.createIcons();</script>
 </body>
 </html>
-

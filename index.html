@@ -5,47 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AuraFlow - Focus, Sleep, Relax.</title>
     
-    <link rel="icon" href="icon.jpg" type="image/jpeg">
+    <link rel="icon" href="icon.png" type="image/png">
     
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
-        
-        :root {
-            --aura-primary: #7B3FAD; 
-            --aura-glow: rgba(123, 63, 173, 0.4);
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #ffffff;
-            overflow-x: hidden;
-        }
-
+        :root { --aura-primary: #7B3FAD; --aura-glow: rgba(123, 63, 173, 0.4); }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; overflow-x: hidden; }
         .bg-aura { background-color: var(--aura-primary); }
         .text-aura { color: var(--aura-primary); }
-        
-        /* Floating Orb Animation */
-        .orb-float {
-            animation: float 8s ease-in-out infinite;
-            filter: drop-shadow(0 0 40px var(--aura-glow));
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) scale(1); }
-            50% { transform: translateY(-15px) scale(1.02); }
-        }
-
-        .btn-hover:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px -5px var(--aura-glow);
-        }
-
+        .orb-float { animation: float 8s ease-in-out infinite; filter: drop-shadow(0 0 40px var(--aura-glow)); }
+        @keyframes float { 0%, 100% { transform: translateY(0px) scale(1); } 50% { transform: translateY(-15px) scale(1.02); } }
+        .btn-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -5px var(--aura-glow); }
         section[id] { scroll-margin-top: 80px; }
-
         .grad-focus { background: linear-gradient(135deg, #454d66, #30364a); }
         .grad-sleep { background: linear-gradient(135deg, #1b2735, #090a0f); }
         .grad-relax { background: linear-gradient(135deg, #e67e22, #d35400); }
@@ -57,96 +31,64 @@
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 h-20 flex items-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
             <a href="#" class="flex items-center space-x-3">
-                <img src="icon.jpg" alt="AuraFlow Icon" class="w-10 h-10 rounded-xl shadow-lg">
+                <img src="icon.png" alt="AuraFlow Icon" class="w-10 h-10 rounded-xl shadow-lg">
                 <span class="text-2xl font-extrabold tracking-tight">Aura<span class="text-aura">Flow</span></span>
             </a>
-
             <div class="hidden md:flex space-x-8 font-semibold text-sm text-gray-600">
                 <a href="#why-aura" class="hover:text-aura transition">Why AuraFlow</a>
                 <a href="#flows" class="hover:text-aura transition">Sound Flows</a>
                 <a href="#contact" class="hover:text-aura transition">Support</a>
             </div>
-
-            <a href="#download" class="bg-aura text-white px-6 py-2.5 rounded-full font-bold shadow-lg btn-hover transition-all">
-                Download
-            </a>
+            <a href="#download" class="bg-aura text-white px-6 py-2.5 rounded-full font-bold shadow-lg btn-hover transition-all">Download</a>
         </div>
     </header>
 
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-950 text-white">
         <div class="absolute inset-0 z-0">
-            <img src="1.jpg" alt="Atmospheric Background" class="w-full h-full object-cover opacity-40">
+            <img src="1.png" alt="Atmospheric Background" class="w-full h-full object-cover opacity-40">
             <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/70 to-transparent"></div>
         </div>
-
         <div class="relative z-10 max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div class="text-center lg:text-left">
-                <span class="inline-block py-1 px-3 rounded-full bg-purple-500/30 border border-purple-400 text-purple-100 text-sm font-bold tracking-wider mb-6">
-                    A PREMIUM AUDIO EXPERIENCE
-                </span>
-                <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-                    Find your rhythm. Master your environment.
-                </h1>
-                <p class="text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed font-light">
-                    AuraFlow is designed to align your mind with your day. Block out distractions for deep work, calm an overactive mind, or drift into restorative sleep instantly.
-                </p>
+                <span class="inline-block py-1 px-3 rounded-full bg-purple-500/30 border border-purple-400 text-purple-100 text-sm font-bold tracking-wider mb-6">A PREMIUM AUDIO EXPERIENCE</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Find your rhythm. Master your environment.</h1>
+                <p class="text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed font-light">AuraFlow is designed to align your mind with your day.</p>
                 <div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
-                    <a href="#download" class="bg-aura hover:bg-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl transition-all transform hover:scale-105">
-                        Start Your Flow
-                    </a>
+                    <a href="#download" class="bg-aura hover:bg-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl transition-all transform hover:scale-105">Start Your Flow</a>
                 </div>
             </div>
             <div class="flex justify-center items-center">
-                <img src="icon.jpg" class="w-64 h-64 md:w-96 md:h-96 rounded-full orb-float" alt="AuraFlow Living Orb">
+                <img src="icon.png" class="w-64 h-64 md:w-96 md:h-96 rounded-full orb-float" alt="AuraFlow Living Orb">
             </div>
         </div>
     </section>
 
     <section id="flows" class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-black mb-4">Four Adaptive Sound Flows</h2>
-                <div class="h-1.5 w-24 bg-aura mx-auto rounded-full"></div>
-            </div>
-
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-5xl font-black mb-16">Four Adaptive Sound Flows</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="bg-white rounded-3xl overflow-hidden shadow-sm group">
                     <div class="h-56 grad-focus flex items-end p-6 relative">
-                        <img src="2.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay group-hover:scale-110 transition" alt="Focus">
+                        <img src="2.png" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay group-hover:scale-110 transition" alt="Focus">
                         <h4 class="text-white text-2xl font-bold relative z-10">Focus</h4>
                     </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 text-sm">Lo-fi textures and steady rhythmic pulses for deep concentration.</p>
-                    </div>
                 </div>
-
                 <div class="bg-white rounded-3xl overflow-hidden shadow-sm group">
                     <div class="h-56 grad-sleep flex items-end p-6 relative">
-                        <img src="3.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay group-hover:scale-110 transition" alt="Sleep">
+                        <img src="3.png" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay group-hover:scale-110 transition" alt="Sleep">
                         <h4 class="text-white text-2xl font-bold relative z-10">Sleep</h4>
                     </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 text-sm">Deep rainfall and ambient drones to quiet the mind.</p>
-                    </div>
                 </div>
-
                 <div class="bg-white rounded-3xl overflow-hidden shadow-sm group">
                     <div class="h-56 grad-relax flex items-end p-6 relative">
-                        <img src="4.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay group-hover:scale-110 transition" alt="Relax">
+                        <img src="4.png" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay group-hover:scale-110 transition" alt="Relax">
                         <h4 class="text-white text-2xl font-bold relative z-10">Relax</h4>
                     </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 text-sm">Warm ambient layers for meditation and unwinding.</p>
-                    </div>
                 </div>
-
                 <div class="bg-white rounded-3xl overflow-hidden shadow-sm group">
                     <div class="h-56 grad-move flex items-end p-6 relative">
-                        <img src="5.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay group-hover:scale-110 transition" alt="Move">
+                        <img src="5.png" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay group-hover:scale-110 transition" alt="Move">
                         <h4 class="text-white text-2xl font-bold relative z-10">Move</h4>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 text-sm">Up-tempo organic percussion for daily activity.</p>
                     </div>
                 </div>
             </div>
@@ -160,14 +102,10 @@
                 <input type="text" name="name" placeholder="Name" required class="w-full p-4 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-aura">
                 <input type="email" name="email" placeholder="Email" required class="w-full p-4 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-aura">
                 <textarea name="message" placeholder="Message" rows="4" required class="w-full p-4 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-aura"></textarea>
-                
                 <div class="flex justify-center py-2">
                     <div class="g-recaptcha" data-sitekey="6LdBJz8sAAAAADan7sFCLwtezM0x30K15OoRmK2D"></div>
                 </div>
-
-                <button type="submit" class="w-full bg-aura py-4 rounded-xl font-bold text-white shadow-lg hover:bg-purple-600 transition">
-                    Send Message
-                </button>
+                <button type="submit" class="w-full bg-aura py-4 rounded-xl font-bold text-white shadow-lg hover:bg-purple-600 transition">Send Message</button>
             </form>
         </div>
     </section>

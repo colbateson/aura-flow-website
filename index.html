@@ -3,55 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AuraFlow - Focus, Sleep, Relax.</title>
-    
+    <title>AuraFlow - Focus, Sleep, Relax</title>
     <link rel="icon" href="icon.png" type="image/png">
-    
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
-        
-        :root {
-            --aura-primary: #7B3FAD; 
-            --aura-glow: rgba(123, 63, 173, 0.4);
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #ffffff;
-            overflow-x: hidden;
-        }
-
+        :root { --aura-primary: #7B3FAD; --aura-glow: rgba(123, 63, 173, 0.4); }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; overflow-x: hidden; color: #1a1a1a; }
         .bg-aura { background-color: var(--aura-primary); }
         .text-aura { color: var(--aura-primary); }
-        
-        /* Floating Orb Animation */
-        .orb-float {
-            animation: float 8s ease-in-out infinite;
-            filter: drop-shadow(0 0 40px var(--aura-glow));
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) scale(1); }
-            50% { transform: translateY(-15px) scale(1.02); }
-        }
-
-        .btn-hover:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px -5px var(--aura-glow);
-        }
-
+        .orb-float { animation: float 8s ease-in-out infinite; filter: drop-shadow(0 0 40px var(--aura-glow)); }
+        @keyframes float { 0%, 100% { transform: translateY(0px) scale(1); } 50% { transform: translateY(-15px) scale(1.02); } }
+        .btn-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -5px var(--aura-glow); }
         section[id] { scroll-margin-top: 80px; }
-
         .grad-focus { background: linear-gradient(135deg, #454d66, #30364a); }
         .grad-sleep { background: linear-gradient(135deg, #1b2735, #090a0f); }
         .grad-relax { background: linear-gradient(135deg, #e67e22, #d35400); }
         .grad-move { background: linear-gradient(135deg, #27ae60, #1e8449); }
     </style>
 </head>
-<body class="text-gray-900 relative">
+<body>
 
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 h-20 flex items-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
@@ -59,16 +32,12 @@
                 <img src="icon.png" alt="AuraFlow Icon" class="w-10 h-10 rounded-xl shadow-lg">
                 <span class="text-2xl font-extrabold tracking-tight">Aura<span class="text-aura">Flow</span></span>
             </a>
-
             <div class="hidden md:flex space-x-8 font-semibold text-sm text-gray-600">
-                <a href="#why-aura" class="hover:text-aura transition">Why AuraFlow</a>
-                <a href="#flows" class="hover:text-aura transition">Sound Flows</a>
+                <a href="#why-aura" class="hover:text-aura transition">The Experience</a>
+                <a href="#flows" class="hover:text-aura transition">Your Flows</a>
                 <a href="#contact" class="hover:text-aura transition">Support</a>
             </div>
-
-            <a href="#download" class="bg-aura text-white px-6 py-2.5 rounded-full font-bold shadow-lg btn-hover transition-all">
-                Download
-            </a>
+            <a href="#download" class="bg-aura text-white px-6 py-2.5 rounded-full font-bold shadow-lg btn-hover transition-all">Download</a>
         </div>
     </header>
 
@@ -77,26 +46,71 @@
             <img src="1.png" alt="Atmospheric Background" class="w-full h-full object-cover object-top opacity-40">
             <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/70 to-transparent"></div>
         </div>
-
         <div class="relative z-10 max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div class="text-center lg:text-left">
-                <span class="inline-block py-1 px-3 rounded-full bg-purple-500/30 border border-purple-400 text-purple-100 text-sm font-bold tracking-wider mb-6">
-                    A PREMIUM AUDIO EXPERIENCE
-                </span>
-                <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-                    Find your rhythm. Master your environment.
-                </h1>
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Find your rhythm. Master your environment.</h1>
                 <p class="text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed font-light">
-                    AuraFlow is designed to align your mind with your day. Block out distractions for deep work, calm an overactive mind, or drift into restorative sleep instantly.
+                    AuraFlow is a premium audio experience designed to align your mind with your day. Whether you need to block out distractions, calm an overactive mind, or drift into restorative sleep, we create the right sonic atmosphere instantly.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
-                    <a href="#download" class="bg-aura hover:bg-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl transition-all transform hover:scale-105">
-                        Start Your Flow
-                    </a>
+                    <a href="#download" class="bg-aura hover:bg-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl transition-all transform hover:scale-105">Start Your Flow</a>
+                    <a href="#why-aura" class="border border-white/30 hover:bg-white/10 text-white px-8 py-4 rounded-full font-bold text-lg transition-all">Why AuraFlow?</a>
                 </div>
             </div>
             <div class="flex justify-center items-center">
                 <img src="icon.png" class="w-64 h-64 md:w-96 md:h-96 rounded-full orb-float" alt="AuraFlow Living Orb">
+            </div>
+        </div>
+    </section>
+
+    <section id="why-aura" class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black mb-4">An evolved sound experience</h2>
+                <p class="text-gray-600 text-lg">Designed to be revisited, not rushed.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Mastering your internal state</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Unlike static playlists or generic white noise machines, AuraFlow offers carefully designed sound flows that adapt to your needs. By combining high fidelity nature recordings with psychoacoustic principles, we help mask distractions, soothe the nervous system, and bring you fully into the moment.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="text-aura mr-3 mt-1"></i>
+                            <span><strong>No Setup, No Clutter:</strong> Just tap your mood and begin.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="text-aura mr-3 mt-1"></i>
+                            <span><strong>Psychoacoustic Design:</strong> Soundscapes engineered to soothe and mask interruptions.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="text-aura mr-3 mt-1"></i>
+                            <span><strong>Living Orb Visuals:</strong> Distraction-free breathing gradients to ground your focus.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-[3rem] border border-gray-100 shadow-inner">
+                    <h4 class="text-xl font-bold mb-6 text-center text-aura">Perfect for:</h4>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex items-center">
+                            <i data-lucide="graduation-cap" class="mr-4 text-gray-400"></i>
+                            <span class="font-medium text-gray-700">Students & Professionals</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex items-center">
+                            <i data-lucide="moon" class="mr-4 text-gray-400"></i>
+                            <span class="font-medium text-gray-700">Seeking better sleep</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex items-center">
+                            <i data-lucide="flower-2" class="mr-4 text-gray-400"></i>
+                            <span class="font-medium text-gray-700">Meditation & Mindfulness</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex items-center">
+                            <i data-lucide="wind" class="mr-4 text-gray-400"></i>
+                            <span class="font-medium text-gray-700">Relaxation in a busy world</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -109,70 +123,92 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white rounded-3xl overflow-hidden shadow-sm group">
+                <div class="bg-white rounded-[2rem] overflow-hidden shadow-sm group border border-gray-100">
                     <div class="h-56 grad-focus flex items-end p-6 relative">
-                        <img src="2.png" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay group-hover:scale-110 transition" alt="Focus">
+                        <img src="2.png" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay group-hover:scale-110 transition duration-700" alt="Focus">
                         <h4 class="text-white text-2xl font-bold relative z-10">Focus</h4>
                     </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 text-sm">Lo-fi textures and steady rhythmic pulses for deep concentration.</p>
+                    <div class="p-8">
+                        <p class="font-bold text-aura mb-2 uppercase text-xs tracking-widest">Problem: Distraction</p>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Lock in and get things done. Uses lo-fi textures and steady rhythmic pulses to help maintain deep concentration. Ideal for studying or creative work.</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl overflow-hidden shadow-sm group">
+                <div class="bg-white rounded-[2rem] overflow-hidden shadow-sm group border border-gray-100">
                     <div class="h-56 grad-sleep flex items-end p-6 relative">
-                        <img src="3.png" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay group-hover:scale-110 transition" alt="Sleep">
+                        <img src="3.png" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay group-hover:scale-110 transition duration-700" alt="Sleep">
                         <h4 class="text-white text-2xl font-bold relative z-10">Sleep</h4>
                     </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 text-sm">Deep rainfall and ambient drones to quiet the mind.</p>
+                    <div class="p-8">
+                        <p class="font-bold text-aura mb-2 uppercase text-xs tracking-widest">Problem: Racing Thoughts</p>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Quiet the mind and drift off naturally. Engineered with deep rainfall textures and low frequency drones to mimic the comfort of a storm.</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl overflow-hidden shadow-sm group">
+                <div class="bg-white rounded-[2rem] overflow-hidden shadow-sm group border border-gray-100">
                     <div class="h-56 grad-relax flex items-end p-6 relative">
-                        <img src="4.png" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay group-hover:scale-110 transition" alt="Relax">
+                        <img src="4.png" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay group-hover:scale-110 transition duration-700" alt="Relax">
                         <h4 class="text-white text-2xl font-bold relative z-10">Relax</h4>
                     </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 text-sm">Warm ambient layers for meditation and unwinding.</p>
+                    <div class="p-8">
+                        <p class="font-bold text-aura mb-2 uppercase text-xs tracking-widest">Problem: Anxiety</p>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Find your centre and breathe. Warm, melodic ambient layers create a calming space for meditation or unwinding after a long day.</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl overflow-hidden shadow-sm group">
+                <div class="bg-white rounded-[2rem] overflow-hidden shadow-sm group border border-gray-100">
                     <div class="h-56 grad-move flex items-end p-6 relative">
-                        <img src="5.png" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay group-hover:scale-110 transition" alt="Move">
+                        <img src="5.png" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay group-hover:scale-110 transition duration-700" alt="Move">
                         <h4 class="text-white text-2xl font-bold relative z-10">Move</h4>
                     </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 text-sm">Up-tempo organic percussion for daily activity.</p>
+                    <div class="p-8">
+                        <p class="font-bold text-aura mb-2 uppercase text-xs tracking-widest">Problem: Stagnation</p>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Energise gently and stay present. Up tempo organic percussion designed for walking and light exercise without the distraction of lyrics.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 bg-white">
-        <div class="max-w-xl mx-auto px-4">
-            <h3 class="text-3xl font-bold mb-8 text-center">Contact Support</h3>
-            <form action="https://formspree.io/f/hello@aura-flow.com" method="POST" class="space-y-4">
-                <input type="text" name="name" placeholder="Name" required class="w-full p-4 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-aura">
-                <input type="email" name="email" placeholder="Email" required class="w-full p-4 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-aura">
-                <textarea name="message" placeholder="Message" rows="4" required class="w-full p-4 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-aura"></textarea>
-                
-                <div class="flex justify-center py-2">
-                    <div class="g-recaptcha" data-sitekey="6LdBJz8sAAAAADan7sFCLwtezM0x30K15OoRmK2D"></div>
-                </div>
-
-                <button type="submit" class="w-full bg-aura py-4 rounded-xl font-bold text-white shadow-lg hover:bg-purple-600 transition">
-                    Send Message
-                </button>
-            </form>
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-black mb-6">No subscriptions. No ads. Just flow.</h2>
+            <p class="text-lg text-gray-600 mb-10 leading-relaxed">
+                AuraFlow is free to try, with selected sessions available at no cost. <br>
+                Unlock the full experience with a <strong>one-time purchase</strong> for unlimited access.
+            </p>
+            <div class="inline-flex items-center space-x-2 text-aura font-bold text-xl">
+                <i data-lucide="infinity"></i>
+                <span>Lifelong calm, one-time payment.</span>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-gray-50 text-gray-400 py-12 text-center text-sm border-t border-gray-100">
-        <div class="flex justify-center space-x-8 mb-4">
+    <section id="download" class="py-24 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-xl mx-auto px-4">
+            <h3 class="text-4xl font-black text-center mb-12">Rediscover your flow.</h3>
+            
+            <div class="flex justify-center space-x-4 mb-20">
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" class="h-14 hover:opacity-80 transition" alt="App Store"></a>
+            </div>
+
+            <div id="contact" class="bg-white p-8 md:p-12 rounded-[3rem] shadow-xl border border-gray-100">
+                <h4 class="text-2xl font-bold text-center mb-8">Need Support?</h4>
+                <form action="https://formspree.io/f/hello@aura-flow.com" method="POST" class="space-y-4">
+                    <input type="text" name="name" placeholder="Name" required class="w-full p-4 rounded-2xl border border-gray-100 bg-gray-50 outline-none focus:ring-2 focus:ring-aura transition">
+                    <input type="email" name="email" placeholder="Email" required class="w-full p-4 rounded-2xl border border-gray-100 bg-gray-50 outline-none focus:ring-2 focus:ring-aura transition">
+                    <textarea name="message" placeholder="Message" rows="4" required class="w-full p-4 rounded-2xl border border-gray-100 bg-gray-50 outline-none focus:ring-2 focus:ring-aura transition"></textarea>
+                    <div class="flex justify-center py-4">
+                        <div class="g-recaptcha" data-sitekey="6LdBJz8sAAAAADan7sFCLwtezM0x30K15OoRmK2D"></div>
+                    </div>
+                    <button type="submit" class="w-full bg-aura py-5 rounded-2xl font-bold text-white shadow-lg hover:bg-purple-600 transition duration-300">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white text-gray-400 py-12 text-center text-sm border-t border-gray-100">
+        <div class="flex justify-center space-x-8 mb-6">
             <a href="privacy.html" class="hover:text-aura transition">Privacy Policy</a>
             <a href="terms.html" class="hover:text-aura transition">Terms of Use</a>
         </div>

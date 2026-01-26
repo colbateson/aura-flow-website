@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AuraFlow - Focus, Sleep, Relax</title>
     <link rel="icon" href="icon.png" type="image/png">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -202,6 +203,10 @@
                     <input type="text" name="name" placeholder="First Name" required class="w-full p-4 rounded-2xl border border-gray-100 bg-gray-50 outline-none focus:ring-2 focus:ring-aura transition">
                     <input type="email" name="email" placeholder="Email Address" required class="w-full p-4 rounded-2xl border border-gray-100 bg-gray-50 outline-none focus:ring-2 focus:ring-aura transition">
                     
+                    <div class="flex justify-center py-4">
+                        <div class="g-recaptcha" data-sitekey="6LfKjE4sAAAAAAPhnoJs20r0xGHtdJI867i0VLzC"></div>
+                    </div>
+
                     <button type="submit" id="submitBtn" class="w-full bg-aura py-5 rounded-2xl font-bold text-white shadow-lg hover:bg-purple-600 transition duration-300">Join Now</button>
                     <p id="formStatus" class="text-center text-sm font-medium h-4 mt-2"></p>
                 </form>
@@ -227,12 +232,21 @@
 
         form.addEventListener('submit', function(e) {
             e.preventDefault();
+
+            // Client-side Captcha Validation Added Here
+            const captchaResponse = grecaptcha.getResponse();
+            if(captchaResponse.length === 0) {
+                statusMsg.innerText = "Please check the captcha box.";
+                statusMsg.classList.add('text-red-500');
+                return; 
+            }
             
             // UI Loading State
             const originalBtnText = submitBtn.innerText;
             submitBtn.innerText = "Joining...";
             submitBtn.disabled = true;
             submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+            statusMsg.innerText = ""; // Clear previous errors
 
             // Construct JSON Payload compatible with your Apps Script
             const payload = {
@@ -241,7 +255,8 @@
                 email: form.email.value,
                 source: "website",
                 subscribed: true,
-                timestamp: new Date().toISOString()
+                timestamp: new Date().toISOString(),
+                captchaToken: captchaResponse // Token added to payload
             };
 
             // Send to Endpoint
@@ -263,6 +278,7 @@
                 submitBtn.classList.add('bg-green-500');
                 
                 form.reset();
+                grecaptcha.reset(); // Reset captcha after successful submission
                 
                 setTimeout(() => {
                     submitBtn.innerText = originalBtnText;

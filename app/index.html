@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AuraFlow – Redirecting…</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO: do not index -->
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: #ffffff;
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #3A0CA3, #4361EE, #4CC9F0);
+      background-size: 200% 200%;
+      animation: gradientShift 8s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .logo {
+      width: 140px;
+      margin-bottom: 25px;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards, glowPulse 4s ease-in-out infinite;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glowPulse {
+      0% { filter: drop-shadow(0 0 4px rgba(76, 201, 240, 0.4)); }
+      50% { filter: drop-shadow(0 0 12px rgba(76, 201, 240, 0.8)); }
+      100% { filter: drop-shadow(0 0 4px rgba(76, 201, 240, 0.4)); }
+    }
+
+    h2 {
+      font-weight: 600;
+      opacity: 0;
+      animation: fadeIn 1.6s ease forwards;
+      animation-delay: 0.3s;
+    }
+
+    p {
+      opacity: 0;
+      animation: fadeIn 1.8s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    a {
+      color: #AEE2F5;
+      font-weight: bold;
+    }
+
+    .spinner {
+      margin: 30px auto;
+      width: 36px;
+      height: 36px;
+      border: 3px solid rgba(255, 255, 255, 0.4);
+      border-top: 3px solid #ffffff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 0.8s;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+
+  <script>
+    const IOS_URL = "https://apps.apple.com/app/id6757202734";
+    const ANDROID_URL = "https://play.google.com/store/apps/details?id=app.auraflow_wellness";
+    const FALLBACK_URL = "https://aura-flow.app";
+
+    function redirectUser() {
+      const ua = navigator.userAgent.toLowerCase();
+
+      if (/iphone|ipad|ipod/.test(ua)) {
+        window.location.replace(IOS_URL);
+      } else if (/android/.test(ua)) {
+        window.location.replace(ANDROID_URL);
+      } else {
+        window.location.replace(FALLBACK_URL);
+      }
+    }
+  </script>
+
+</head>
+
+<body onload="redirectUser()">
+
+  <img class="logo" src="/icon.png" alt="AuraFlow Logo">
+
+  <h2>Redirecting you to AuraFlow…</h2>
+  <div class="spinner"></div>
+
+  <p>If you are not redirected automatically, <a href="https://aura-flow.app">click here</a>.</p>
+
+</body>
+</html>
